@@ -36,17 +36,4 @@ upgrade_wget() {
     WGET="$wget_path"
 }
 
-download() {
-    file_url="https://raw.githubusercontent.com/PepikVaio/reMarkable_re-Planner/main/Template/(en)%20re-Planner%202024%20(Lite).pdf"
-    output_file="test.pdf"
 
-    echo "Stahování souboru: $output_file"
-
-    $WGET "$file_url"
-
-    if [ $? -eq 0 ]; then
-        echo "Soubor byl úspěšně stažen: $output_file"
-    else
-        echo "Chyba při stahování souboru: $output_file"
-    fi
-}
