@@ -13,15 +13,6 @@ COLOR_ERROR='\e[31m'
 # NOCOLOR pro návrat k normální barvě textu.
 NOCOLOR='\e[0m'
 
-# APP_BINARY obsahuje cestu k binárnímu souboru xochitl. Pravděpodobně se jedná o hlavní aplikaci na zařízení Remarkable.
-APP_BINARY="/usr/bin/xochitl"
-# CACHE_DIR je cesta k adresáři, který slouží jako mezipaměť pro různé soubory související s xochitl. Zdá se, že se zde uchovávají některé dočasné soubory.
-CACHE_DIR="/home/root/.cache/remarkable/xochitl/qmlcache/"
-# PATCH_URL obsahuje URL, ze které je možné stahovat patche, které budou aplikovány na xochitl.
-PATCH_URL="https://raw.githubusercontent.com/mb1986/rm-hacks/main/patches/"
-# ZONEINFO_DIR obsahuje cestu k adresáři, kde jsou ukládány informace o časových zónách.
-ZONEINFO_DIR="/usr/share/zoneinfo/"
-
 # Tato řádka vytváří proměnnou WGET a přiřazuje jí hodnotu "wget".
 # Tímto způsobem je vytvořena proměnná, která obsahuje název příkazu (v tomto případě "wget").
 # Tuto proměnnou můžete poté použít v kódu skriptu, aby byl váš skript flexibilnější a lépe spravovatelný.
