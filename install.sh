@@ -8,46 +8,45 @@ NOCOLOR='\e[0m'
 
 WGET="wget"
 
-download() {
-    file_url=$1
-    output_file=$2
+upgrade_wget() {
+    wget_path=/home/root/.local/share/test/wget
+    wget_remote=http://toltec-dev.org/thirdparty/bin/wget-v1.21.1-1
+    wget_checksum=c258140f059d16d24503c62c1fdf747ca843fe4ba8fcd464a6e6bda8c3bbb6b5
 
-    echo -e "${COLOR_SUCCESS}Stahování souboru: $output_file${NOCOLOR}"
-
-    $WGET --content-disposition "$file_url"
-
-    # Kontrola úspěšnosti stahování
-    if [ $? -eq 0 ]; then
-        echo -e "${COLOR_SUCCESS}Soubor byl úspěšně stažen: $output_file${NOCOLOR}"
-    else
-        echo -e "${COLOR_ERROR}Chyba při stahování souboru: $output_file${NOCOLOR}"
+    if [ -f "$wget_path" ] && ! sha256sum -c <(echo "$wget_checksum  $wget_path") > /dev/null 2>&1; then
+        rm "$wget_path"
     fi
+
+    if ! [ -f "$wget_path" ]; then
+        echo "Fetching secure wget..."
+        # Download and compare to hash
+        mkdir -p "$(dirname "$wget_path")"
+        if ! wget -q "$wget_remote" --output-document "$wget_path"; then
+            echo "${COLOR_ERROR}Error: Could not fetch wget, make sure you have a stable Wi-Fi connection${NOCOLOR}"
+            exit 1
+        fi
+    fi
+
+    if ! sha256sum -c <(echo "$wget_checksum  $wget_path") > /dev/null 2>&1; then
+        echo "${COLOR_ERROR}Error: Invalid checksum for the local wget binary${NOCOLOR}"
+        exit 1
+    fi
+
+    chmod 755 "$wget_path"
+    WGET="$wget_path"
 }
 
-echo ""
-echo -e "${COLOR_USER} rM Hacks Installer ${NOCOLOR}"
-echo -e "${COLOR_USER}--------------------${NOCOLOR}"
-echo ""
+download() {
+    file_url="https://raw.githubusercontent.com/PepikVaio/reMarkable_re-Planner/main/Template/(en)%20re-Planner%202024%20(Lite).pdf"
+    output_file="test.pdf"
 
-if [[ "$1" = "download" && -n "$2" && -n "$3" ]]; then
+    echo "Stahování souboru: $output_file"
 
-    file_url=$2
-    output_file=$3
+    $WGET "$file_url"
 
-    download "$file_url" "$output_file"
-
-elif [[ "$1" = "patch" && -n "$2" || -z "$1" ]]; then
-
-    patch_version_arg=$2
-    # Zde pokračuje váš původní kód pro instalaci patche...
-
-else
-
-    echo "usage: install.sh [download <file_url> <output_file> | patch <version> | uninstall]"
-    exit 1
-
-fi
-
-# Zbytek skriptu...
-
-exit 0
+    if [ $? -eq 0 ]; then
+        echo "Soubor byl úspěšně stažen: $output_file"
+    else
+        echo "Chyba při stahování souboru: $output_file"
+    fi
+}
