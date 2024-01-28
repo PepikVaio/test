@@ -75,7 +75,7 @@ suspended() {
         echo "Soubor $name_OriginalSuspendedFile_Backup nalezen ve složce $path_OroginalFolder_Backup"
     else
         echo "Soubor $name_OriginalSuspendedFile_Backup nenalezen ve složce $path_OroginalFolder_Backup"
-        cp /$path_OriginalFolder/$name_OriginalSuspendedFile /$path_OroginalFolder_Backup/name_OriginalSuspendedFile_Backup
+        cp $path_OriginalFolder/$name_OriginalSuspendedFile $path_OroginalFolder_Backup/name_OriginalSuspendedFile_Backup
     fi
 }
 
