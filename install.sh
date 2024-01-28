@@ -114,21 +114,22 @@ copy2() {
 
 copy() {
 
-# Adresáře a soubory
-folder_Remote="/usr/share/remarkable"
-file_Remote="suspended.png"
-
-#folder_Mobile="/cesta/k/souboru/na/mobilu"
-echo -n "Zadejte název souboru pro novou sleepscreen:"
-read folder_Mobile
-file_Mobile="test.png"
-
 # Zadejte IP adresu nebo název hostitele vašeho reMarkable
-remarkable_IP="10.0.1.14"
+remarkable_IP="10.11.99.1"
 remarkable_User="root"
 
-# Použijte scp k kopírování souboru ze mobilu na reMarkable
-scp "$folder_Mobile/$file_Mobile" "$remarkable_User@$remarkable_IP:$folder_Remote/$file_Remote"
+# Cesta k lokálnímu souboru, který chcete zkopírovat na reMarkable
+echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
+read local_file
+
+# Cílová cesta a název souboru na reMarkable
+remote_path="/usr/share/remarkable/"
+remote_file="suspended.png"
+
+# Kopírování souboru na reMarkable
+scp "$local_file" "$remarkable_User@$remarkable_IP:$remote_path$remote_file"
+
+echo "Synchronized! reMarkable should be rebooting now."
 
 
  
