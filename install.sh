@@ -68,7 +68,7 @@ suspended() {
     folder_Original="/usr/share/remarkable"
     file_Original="suspended.png"
     # Backup
-    folder_Backup="/home/root/.local/share/Wajsar_Josef/Original_Screen"
+    folder_Backup="/home/root/.local/share/Wajsar_Josef/Backup_Screen"
     file_Backup="suspended_original.png"
 
     if [ -e "$folder_Backup/$file_Backup" ]; then
