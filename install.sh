@@ -124,7 +124,7 @@ copy() {
     read file_New
 
     scp -r "$file_New" "root@10.0.1.14:$folder_Original/$file_Original"
-    -ssh "root@10.0.1.14" "$folder_Original/$file_New" "$folder_Original/$file_Original"
+    ssh "root@10.0.1.14" "cp '$folder_Original/$(basename "$file_New")' '$folder_Original/$file_Original'"
  
 }
 
