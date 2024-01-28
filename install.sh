@@ -136,7 +136,7 @@ echo "Synchronized! reMarkable should be rebooting now."
 }
 
 
-copy() {
+copy2() {
 
 # Adresa IP nebo název hostitele reMarkable
 remarkable_IP="10.11.99.1"
