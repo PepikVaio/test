@@ -68,19 +68,19 @@ suspended() {
     folder_Original="/usr/share/remarkable"
     file_Original="suspended.png"
     # Backup
-    folder_Original_Backup="/home/root/.local/share/Wajsar_Josef/Original_Screen"
-    file_Original_Backup="suspended_original.png"
+    folder_Backup="/home/root/.local/share/Wajsar_Josef/Original_Screen"
+    file_Backup="suspended_original.png"
 
-    if [ -e "$folder_Original_Backup/$file_Original_Backup" ]; then
-        echo "Soubor $file_Original_Backup nalezen ve složce $folder_Original_Backup"
+    if [ -e "$folder_Backup/$file_Backup" ]; then
+        echo "Soubor $file_Backup nalezen ve složce $folder_Backup"
     else
-        echo "Soubor $file_Original_Backup nenalezen ve složce $folder_Original_Backup"
+        echo "Soubor $file_Backup nenalezen ve složce $folder_Backup"
 
-        mkdir -p $folder_Original_Backup
-        cp "$folder_Original/$file_Original" "$folder_Original_Backup/$file_Original_Backup"
-
+        mkdir -p "$folder_Backup"
+        cp "$folder_Original/$file_Original" "$folder_Backup/$file_Backup"
     fi
 }
+
 
 
 
