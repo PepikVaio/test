@@ -75,6 +75,8 @@ suspended() {
         echo "Soubor $file_Original_Backup nalezen ve složce $folder_Original_Backup"
     else
         echo "Soubor $file_Original_Backup nenalezen ve složce $folder_Original_Backup"
+
+        mkdir -p $folder_Original_Backup
         cp "$folder_Original/$file_Original" "$folder_Original_Backup/$file_Original_Backup"
     fi
 }
