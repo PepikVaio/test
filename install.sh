@@ -64,18 +64,18 @@ download() {
 }
 
 suspended() {
-    # Backup
-    path_OriginalFolder_Backup="/home/root/.local/share/Wajsar_Josef/Original_Screen/"
-    name_OriginalSuspendedFile_Backup="suspended_original.png"
     # Original
-    path_OriginalFolder="/usr/share/remarkable/"
-    name_OriginalSuspendedFile="suspended.png"
+    folder_Original="/usr/share/remarkable"
+    file_Original="suspended.png"
+    # Backup
+    folder_Original_Backup="/home/root/.local/share/Wajsar_Josef/Original_Screen"
+    file_Original_Backup="suspended_original.png"
 
-    if [ -e "$path_OriginalFolder_Backup/$name_OriginalSuspendedFile_Backup" ]; then
-        echo "Soubor $name_OriginalSuspendedFile_Backup nalezen ve složce $path_OriginalFolder_Backup"
+    if [ -e "$folder_Original_Backup/$file_Original_Backup" ]; then
+        echo "Soubor $file_Original_Backup nalezen ve složce $folder_Original_Backup"
     else
-        echo "Soubor $name_OriginalSuspendedFile_Backup nenalezen ve složce $path_OriginalFolder_Backup"
-        cp "$path_OriginalFolder/$name_OriginalSuspendedFile" "$path_OriginalFolder_Backup/$name_OriginalSuspendedFile_Backup"
+        echo "Soubor $file_Original_Backup nenalezen ve složce $folder_Original_Backup"
+        cp "$folder_Original/$file_Original" "$folder_Original_Backup/$file_Original_Backup"
     fi
 }
 
