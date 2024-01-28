@@ -116,7 +116,7 @@ copy2(){
     # New
     echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
     read file_New
-    echo -n "$file_New"
+    echo -n $file_New
 
     # Kopírování souboru na reMarkable s heslem
     echo "$remarkable_Password" | scp $file_New root@10.0.1.14:/home/root/.local/share/
