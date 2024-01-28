@@ -105,8 +105,9 @@ copy() {
     read file_New
 
     # Přesunutí souboru na reMarkable
-    echo "$remarkable_Password" | scp "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
+    echo "$remarkable_Password" | scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
 }
+
 
 
 copy
