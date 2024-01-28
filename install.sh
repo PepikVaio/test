@@ -49,8 +49,6 @@ upgrade_wget() {
 }
 
 download() {
-    upgrade_wget
-    
     file_url="https://raw.githubusercontent.com/PepikVaio/reMarkable_re-Planner/main/Template/(en)%20re-Planner%202024%20(Lite).pdf"
     output_file="test.pdf"
 
@@ -65,4 +63,17 @@ download() {
     fi
 }
 
-download
+suspended() {
+    path_OroginalFolder_Backup=/home/root/.local/share/Wajsar_Josef/Original_Screen
+    path_OriginalFolder=/usr/share/remarkable/
+    name_SuspendedFile="suspended_original.png"
+
+    if [ -e "$path_OroginalFolder_Backup/$name_SuspendedFile" ]; then
+        echo "Soubor $name_SuspendedFile nalezen ve složce $path_OroginalFolder_Backup"
+    else
+        echo "Soubor $name_SuspendedFile nenalezen ve složce $path_OroginalFolder_Backup"
+    fi
+}
+
+suspended
+
