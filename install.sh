@@ -92,7 +92,7 @@ suspended() {
 copy() {
     remarkable_IP="10.0.1.14"
     remarkable_User="root"
-    remarkable_Password="Wcx9c0w6xU"
+    remarkable_Password=""
 
     # Original
     folder_Original="/usr/share/remarkable"
