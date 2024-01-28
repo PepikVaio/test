@@ -92,7 +92,7 @@ suspended() {
 copy() {
     remarkable_IP="10.0.1.14"
     remarkable_User="root"
-    remarkable_Password=""
+    remarkable_Password="Wcx9c0w6xU"
 
     # Original
     folder_Original="/usr/share/remarkable"
@@ -105,8 +105,9 @@ copy() {
     read file_New
 
     # Přesunutí souboru na reMarkable
-    sshpass -p "$remarkable_Password" scp "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
+    echo "$remarkable_Password" | scp "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
 }
+
 
 copy
 
