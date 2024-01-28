@@ -126,7 +126,7 @@ copy3() {
     remarkable_Password="YourPasswordHere"
 
     # Zadejte cestu k souboru na mobilu
-    echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
+    echo -n "Zadejte cestu k souboru:"
     read file_New
 
     # Přenos souboru z mobilu na reMarkable pomocí expect
