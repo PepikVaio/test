@@ -135,5 +135,28 @@ echo "Synchronized! reMarkable should be rebooting now."
  
 }
 
-copy
+
+copy() {
+
+# Adresa IP nebo název hostitele reMarkable
+remarkable_IP="10.11.99.1"
+remarkable_User="root"
+
+# Získání cesty k lokálnímu souboru na iPhonu (vyplňte podle skutečné cesty)
+local_file="/iCloud Drive/Stahování/Test.png"
+
+# Cílová cesta a název souboru na reMarkable
+remote_path="/usr/share/remarkable/"
+remote_file="novy_soubor.png"
+
+# Kopírování souboru na reMarkable
+scp "$local_file" "$remarkable_User@$remarkable_IP:$remote_path$remote_file"
+
+# Nyní můžete provést další synchronizační operace, např. restart
+ssh "$remarkable_User@$remarkable_IP" "/sbin/reboot"
+
+echo "Soubor byl úspěšně zkopírován na reMarkable a provedena synchronizace."
+}
+
+copy2
 
