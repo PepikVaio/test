@@ -90,9 +90,6 @@ suspended() {
 }
 
 copy() {
-    remarkable_IP="10.0.1.14"
-    remarkable_User="root"
-
     # Original
     folder_Original="/usr/share/remarkable"
     file_Original="suspended.png"
@@ -106,7 +103,7 @@ copy() {
     read file_New
 
     # Přesunutí souboru na reMarkable
-    scp "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
+    wget -O $folder_Backup/$file_Original https://i.imgur.com/RGkuFlB.jpg
 }
 
 copy2(){
@@ -166,4 +163,4 @@ copy4() {
 
 
 
-copy4
+copy
