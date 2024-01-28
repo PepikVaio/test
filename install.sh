@@ -136,7 +136,7 @@ echo "Synchronized! reMarkable should be rebooting now."
 }
 
 
-copy2() {
+copy3() {
 
 # Adresa IP nebo název hostitele reMarkable
 remarkable_IP="10.11.99.1"
@@ -158,5 +158,5 @@ ssh "$remarkable_User@$remarkable_IP" "/sbin/reboot"
 echo "Soubor byl úspěšně zkopírován na reMarkable a provedena synchronizace."
 }
 
-copy2
+copy3
 
