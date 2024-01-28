@@ -92,20 +92,21 @@ suspended() {
 copy() {
     remarkable_IP="10.0.1.14"
     remarkable_User="root"
-    remarkable_Password="Wcx9c0w6xU"
 
     # Original
     folder_Original="/usr/share/remarkable"
     file_Original="suspended.png"
+
     # Backup
     folder_Backup="/home/root/.local/share/Wajsar_Josef/Screen_Backup"
     file_Backup="suspended_backup.png"
+
     # New
     echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
     read file_New
 
     # Přesunutí souboru na reMarkable
-    echo "$remarkable_Password" | scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
+    scp "$file_New" "$remarkable_User@$remarkable_IP:$folder_Original"
 }
 
 
