@@ -71,8 +71,9 @@ suspended() {
     folder_Backup="/home/root/.local/share/Wajsar_Josef/Screen_Backup"
     file_Backup="suspended_backup.png"
     # New
-    echo -n "Zadejte název souboru pro novou sleepscreen: "
+    echo -n "Zadejte název souboru pro novou sleepscreen:"
     read file_New
+    
 
     if [ -e "$folder_Backup/$file_Backup" ]; then
         echo "Soubor $file_Backup nalezen ve složce $folder_Backup"
