@@ -113,7 +113,6 @@ copy2() {
 }
 
 copy() {
-#!/bin/bash
 
 # Adresáře a soubory
 folder_Remote="/usr/share/remarkable"
