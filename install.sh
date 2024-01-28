@@ -121,7 +121,29 @@ copy2(){
     sshpass -p "$remarkable_Password" scp "$file_New" root@10.0.1.14:/home/root/.local/share/
 }
 
+copy3() {
+    # Heslo pro připojení k reMarkable
+    remarkable_Password="YourPasswordHere"
+
+    # Zadejte cestu k souboru na mobilu
+    echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
+    read file_New
+
+    # Přenos souboru z mobilu na reMarkable pomocí expect
+    expect -c "
+        spawn scp $file_New root@10.0.1.14:/home/root/.local/share/
+        expect {
+            \"*assword:\" {
+                send \"$remarkable_Password\n\"
+                interact
+            }
+            eof {
+                exit
+            }
+        }
+    "
+}
 
 
 
-copy2
+copy3
