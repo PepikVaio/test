@@ -89,8 +89,21 @@ suspended() {
     fi
 }
 
+copy() {
+    # Original
+    folder_Original="/usr/share/remarkable"
+    file_Original="suspended.png"
+    # Backup
+    folder_Backup="/home/root/.local/share/Wajsar_Josef/Screen_Backup"
+    file_Backup="suspended_backup.png"
+    # New
+    echo -n "Zadejte název souboru pro novou sleepscreen:"
+    read file_New
+    
+    cp "$file_New" "$folder_Original/$file_Original"
+    echo "Nový sleepscreen nahrán"
+}
 
 
-
-suspended
+copy
 
