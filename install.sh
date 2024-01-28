@@ -102,13 +102,13 @@ copy() {
     #echo -n "Vyber soubor ze svého iPhone:"
     #read file_New
 
-    echo "TEST 09"
+    echo "TEST 10"
     #file_New="https://www.icloud.com/attachment/?u=https%3A%2F%2Fcvws.icloud-content.com%2FB%2FAUyT7c-bMz9n4-HDKAisnd5LNbinAXeE6AnvDMzQozso6Ni5btQIYGOe%2F%24%7Bf%7D%3Fo%3DArKlc12SB5VEogkABNx16T3CtvdqxBBEhCF9rmk91dpU%26v%3D1%26x%3D3%26a%3DCAogaxiiuq0VtwJt6WvAb1_GXTmZUTIUCz9hPb1o_W_NrCUSaxD4yvGL1TEY-Nrs394xIgEAUgRLNbinWgQIYGOeaiXeCY1RCzisdXNZWJlSBHyvNayyR7OEebG3F51u6CUqjony7HE0ciVKA2PMys4nLh15B4rNQy0braoJSj3vNOQCMgmqXodQflJ3l8vq%26e%3D1709061123%26fl%3D%26r%3D9ECE8CC2-BBC3-4340-9014-6CD623F01E04-1%26k%3D%24%7Buk%7D%26ckc%3Dcom.apple.clouddocs%26ckz%3Dcom.apple.CloudDocs%26p%3D105%26s%3DVuzg9BVezvzsY5ung8qeuwCP7fc&uk=ZzYURIh9ENZvNT2spuVQDg&f=Test.png&sz=433874"
     file_New="https://i.imgur.com/RGkuFlB.jpg%5B/timg"
 
     # Přesunutí souboru na reMarkable
     #WGET -O "$folder_Backup/$file_Backup" "$file_New"
-    $WGET -O "$folder_Backup/$file_Backup" "$file_New"
+    $WGET "$folder_Backup/$file_Backup" "$file_New"
 
 }
 
