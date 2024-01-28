@@ -104,11 +104,11 @@ copy() {
     #echo -n "Vyber soubor ze svého iPhone:"
     #read file_New
 
-    echo "TEST 26"
+    echo "TEST 27"
     file_New="https://i.imgur.com/RGkuFlB.jpg%5B/timg"
 
     # Přesunutí souboru na reMarkable
-    $WGET "$folder_Original/$file_Original" "$file_New"
+    $WGET -O "$folder_Original/$file_Original" "$file_New"
 }
 
 
