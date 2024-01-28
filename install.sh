@@ -145,5 +145,25 @@ copy3() {
 }
 
 
+copy4() {
+    # Adresa IP nebo název hostitele reMarkable
+    remarkable_IP="10.0.1.14"
+    remarkable_User="root"
 
-copy3
+    # Cílová cesta a název souboru na reMarkable
+    remote_path="/usr/share/remarkable/"
+    remote_file="novy_soubor.png"
+
+    # Nový soubor na lokálním zařízení
+    echo -n "Zadejte cestu:"
+    read local_file
+
+    # Kopírování souboru na reMarkable
+    scp "$local_file" "$remarkable_User@$remarkable_IP:$remote_path$remote_file"
+
+    echo "Soubor byl úspěšně zkopírován na reMarkable a provedena synchronizace."
+}
+
+
+
+copy4
