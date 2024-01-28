@@ -113,18 +113,25 @@ copy2() {
 }
 
 copy() {
-    # Original
-    folder_Original="/usr/share/remarkable"
-    file_Original="suspended.png"
-    # Backup
-    folder_Backup="/home/root/.local/share/Wajsar_Josef/Screen_Backup"
-    file_Backup="suspended_backup.png"
-    # New
-    echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu2:"
-    read file_New
+#!/bin/bash
 
-    scp -r "$file_New" "root@10.0.1.14:$folder_Original/$file_Original"
-    ssh "root@10.0.1.14" "cp '$folder_Original/$(basename "$file_New")' '$folder_Original/$file_Original'"
+# Adresáře a soubory
+folder_Remote="/usr/share/remarkable"
+file_Remote="suspended.png"
+
+#folder_Mobile="/cesta/k/souboru/na/mobilu"
+echo -n "Zadejte název souboru pro novou sleepscreen:"
+read folder_Mobile
+file_Mobile="test.png"
+
+# Zadejte IP adresu nebo název hostitele vašeho reMarkable
+remarkable_IP="10.0.1.14"
+remarkable_User="root"
+
+# Použijte scp k kopírování souboru ze mobilu na reMarkable
+scp "$folder_Mobile/$file_Mobile" "$remarkable_User@$remarkable_IP:$folder_Remote/$file_Remote"
+
+
  
 }
 
