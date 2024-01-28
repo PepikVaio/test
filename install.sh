@@ -99,11 +99,12 @@ copy() {
     file_Backup="suspended_backup.png"
 
     # New
-    echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
+    echo -n "Vyber soubor ze svého iPhone:"
     read file_New
 
     # Přesunutí souboru na reMarkable
-    wget -O $folder_Backup $file_New
+    wget -O "$folder_Backup/$file_Backup" "$file_New"
+
 }
 
 copy2(){
