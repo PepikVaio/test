@@ -113,18 +113,14 @@ copy2(){
     # Heslo pro připojení k reMarkable
     remarkable_Password="Wcx9c0w6xU"
 
-    # New
+    # Zadejte cestu k souboru na mobilu
     echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
     read file_New
-    echo -n $file_New
 
-    # Kopírování souboru na reMarkable s heslem
-    echo "$remarkable_Password" | scp $file_New root@10.0.1.14:/home/root/.local/share/
-
-
-
-
+    # Přenos souboru z mobilu na reMarkable
+    sshpass -p "$remarkable_Password" scp "$file_New" root@10.0.1.14:/home/root/.local/share/
 }
+
 
 
 
