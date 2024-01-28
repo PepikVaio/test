@@ -89,7 +89,7 @@ suspended() {
     fi
 }
 
-copy2() {
+copy() {
     # Original
     folder_Original="/usr/share/remarkable"
     file_Original="suspended.png"
@@ -112,51 +112,5 @@ copy2() {
     ssh root@10.0.1.14 "cp $folder_Original/$(basename "$file_New") $folder_Original/$file_Original"
 }
 
-copy() {
-
-# Zadejte IP adresu nebo název hostitele vašeho reMarkable
-remarkable_IP="10.11.99.1"
-remarkable_User="root"
-
-# Cesta k lokálnímu souboru, který chcete zkopírovat na reMarkable
-echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
-read local_file
-
-# Cílová cesta a název souboru na reMarkable
-remote_path="/usr/share/remarkable/"
-remote_file="suspended.png"
-
-# Kopírování souboru na reMarkable
-scp "$local_file" "$remarkable_User@$remarkable_IP:$remote_path$remote_file"
-
-echo "Synchronized! reMarkable should be rebooting now."
-
-
- 
-}
-
-
-copy3() {
-
-# Adresa IP nebo název hostitele reMarkable
-remarkable_IP="10.11.99.1"
-remarkable_User="root"
-
-# Získání cesty k lokálnímu souboru na iPhonu (vyplňte podle skutečné cesty)
-local_file="/iCloud Drive/Stahování/Test.png"
-
-# Cílová cesta a název souboru na reMarkable
-remote_path="/usr/share/remarkable/"
-remote_file="novy_soubor.png"
-
-# Kopírování souboru na reMarkable
-scp "$local_file" "$remarkable_User@$remarkable_IP:$remote_path$remote_file"
-
-# Nyní můžete provést další synchronizační operace, např. restart
-ssh "$remarkable_User@$remarkable_IP" "/sbin/reboot"
-
-echo "Soubor byl úspěšně zkopírován na reMarkable a provedena synchronizace."
-}
-
-copy3
+copy
 
