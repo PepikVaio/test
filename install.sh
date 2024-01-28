@@ -105,8 +105,9 @@ copy() {
 
 
 
-    echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
-    read file_New
+    #echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu:"
+    #read file_New
+    file_New="iCloudDrive/Stahování/Test.png"
 
     scp "$file_New" root@10.0.1.14:"$folder_Original"
     ssh root@10.0.1.14 "cp $folder_Original/$(basename "$file_New") $folder_Original/$file_Original"
