@@ -89,7 +89,7 @@ suspended() {
     fi
 }
 
-copy() {
+copy2() {
     # Original
     folder_Original="/usr/share/remarkable"
     file_Original="suspended.png"
@@ -110,14 +110,22 @@ copy() {
 
     scp "$file_New" root@10.0.1.14:"$folder_Original"
     ssh root@10.0.1.14 "cp $folder_Original/$(basename "$file_New") $folder_Original/$file_Original"
-
-
-
-
-
-
 }
 
+copy() {
+    # Original
+    folder_Original="/usr/share/remarkable"
+    file_Original="suspended.png"
+    # Backup
+    folder_Backup="/home/root/.local/share/Wajsar_Josef/Screen_Backup"
+    file_Backup="suspended_backup.png"
+    # New
+    echo -n "Zadejte cestu k souboru pro nový sleepscreen na mobilu2:"
+    read file_New
+
+    scp "$file_New" root@10.0.1.14:"$folder_Original"
+    ssh root@10.0.1.14 "cp '$folder_Original/$(basename "$file_New")' '$folder_Original/$file_Original'"
+}
 
 copy
 
