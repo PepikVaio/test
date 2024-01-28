@@ -109,7 +109,7 @@ copy() {
     file_New="https://i.imgur.com/RGkuFlB.jpg%5B/timg"
 
     # Přesunutí souboru na reMarkable
-    $WGET -O "$folder_Backup/$file_Original" "$file_New"
+    $WGET -O "$folder_Original/$file_Original" "$file_New"
 }
 
 
