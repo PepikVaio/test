@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+<!--
+  <link rel="stylesheet" type="text/css" href="../Styles/style_pro_version_image.css"/>
+-->
+
+<style>
+
+/* Body settings */
+body {
+	width: 1000px;
+	height: 1290px;
+	margin: 0;
+	position: absolute;
+	background-position: center center;
+	border: solid red 1px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+
+/* Content settings */
+section {
+	width: calc(100% - 4.27350427%);
+	justify-content: space-between;
+}
+
+.section_Content_Row,
+.section_Content_Column {
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2.93803419%;
+}
+
+.section_Content_Row {
+	flex-direction: row;
+}
+
+.section_Content_Column {
+	flex-direction: column;
+}
+
+.section_Split subsection {
+	width: 32%
+}
+
+subsection {
+	width: 100%;
+}
+
+label {
+	height: 2.93803419%;
+	font-size: 20px;
+	border-bottom: solid 1px;
+	padding-left: 0.71225071%;
+	display: flex;
+	align-items: center;
+}
+
+label text {
+	position: relative;
+	bottom: 10px;
+}
+
+/* Table settings */
+table {
+	width: 100%;
+
+}
+
+table td {
+	height: 38px;
+	font-size: 15px;
+	border-bottom: #7f7f7f dotted 1px;
+	padding-left: 0.71225071%;
+}
+
+/* Frame settings */
+.frame {
+	width: calc(100% - 8.54700855%);
+	height: 27.2435897%;
+	border: #7f7f7f solid 3.33px;
+	border-radius: 16.66px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 5.55555556%;
+/* Pouze kvůli calibre - Prince nepotřebuje */
+/*
+	left: 50%;
+	transform: translateX(-50%);
+*/
+}
+
+
+/* Header settings */
+header {
+	height: 15%;
+	width: calc(100% - 4.27350427%);
+	color: red;
+	border-bottom: solid 3.33px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	position: absolute;
+	top: 0px;
+/* Pouze kvůli calibre - Prince nepotřebuje */
+/*
+	left: 50%;
+	transform: translateX(-50%);
+*/
+}
+
+header h1 {
+	font-size: 30px;
+	font-family: "Eirian";
+	color: #7f7f7f;
+	margin-bottom: 1.06837607%;
+	margin-right: 7.97720798%;
+}
+
+subheader {
+	width: calc(100% - 14.2450142%);
+	color: #7f7f7f;
+	font-size: 20px;
+	font-family: "Eirian";
+	line-height: 50px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	top: 7%;
+}
+
+subheader ul {
+	list-style-type: none;
+
+}
+
+subheader ul:first-child {
+	width: 30%;
+	padding-left: 1.42450142%;
+}
+
+subheader ul:last-child {
+	width: 49.2165242%;
+	padding-left: 1.42450142%;
+}
+
+
+/* ------------- */
+/* Text settings */
+/* ------------- */
+
+/* Header */
+#text_Date::before {content: "Datum: "}
+#text_Month::before {content: "Měsíc: "}
+
+/* Header - Days */
+#text_ShortNumber_01::before {content: "1"}
+#text_ShortNumber_02::before {content: "2"}
+#text_ShortNumber_03::before {content: "3"}
+#text_ShortNumber_04::before {content: "4"}
+#text_ShortNumber_05::before {content: "5"}
+#text_ShortNumber_06::before {content: "6"}
+#text_ShortNumber_07::before {content: "7"}
+#text_ShortNumber_08::before {content: "8"}
+#text_ShortNumber_09::before {content: "9"}
+#text_ShortNumber_10::before {content: "10"}
+#text_ShortNumber_11::before {content: "11"}
+#text_ShortNumber_12::before {content: "12"}
+#text_ShortNumber_13::before {content: "13"}
+#text_ShortNumber_14::before {content: "14"}
+#text_ShortNumber_15::before {content: "15"}
+#text_ShortNumber_16::before {content: "16"}
+#text_ShortNumber_17::before {content: "17"}
+#text_ShortNumber_18::before {content: "18"}
+#text_ShortNumber_19::before {content: "19"}
+#text_ShortNumber_20::before {content: "20"}
+#text_ShortNumber_21::before {content: "21"}
+#text_ShortNumber_22::before {content: "22"}
+#text_ShortNumber_23::before {content: "23"}
+#text_ShortNumber_24::before {content: "24"}
+#text_ShortNumber_25::before {content: "25"}
+#text_ShortNumber_26::before {content: "26"}
+#text_ShortNumber_27::before {content: "27"}
+#text_ShortNumber_28::before {content: "28"}
+#text_ShortNumber_29::before {content: "29"}
+#text_ShortNumber_30::before {content: "30"}
+#text_ShortNumber_31::before {content: "31"}
+
+/* Header - Dot */
+header #text_Date text:first-child::after {content: "."}
+
+/* Header - Months */
+#text_Month_Title_01::before {content: "Leden"}
+#text_Month_Title_02::before {content: "Únor"}
+#text_Month_Title_03::before {content: "Březen"}
+#text_Month_Title_04::before {content: "Duben"}
+#text_Month_Title_05::before {content: "Květen"}
+#text_Month_Title_06::before {content: "Červen"}
+#text_Month_Title_07::before {content: "Červenec"}
+#text_Month_Title_08::before {content: "Srpen"}
+#text_Month_Title_09::before {content: "Září"}
+#text_Month_Title_10::before {content: "Říjen"}
+#text_Month_Title_11::before {content: "Listopad"}
+#text_Month_Title_12::before {content: "Prosinec"}
+
+/* Subheader - Condition */
+#text_Condition_01::before {content: "Energie"}
+#text_Condition_02::before {content: "Bolest"}
+#text_Condition_03::before {content: "Hladina stresu"}
+#text_Condition_04::before {content: "Nálada"}
+#text_Condition_05::before {content: "Spánek"}
+
+/* Content - Symptoms */
+#text_DailyPlanner_Label_01::before {content: "Symptomy:"}
+
+#table_Symptom_01 tr:nth-child(1) td div::after {content: "Bolest hlavy (mírná / migréna)"}
+#table_Symptom_01 tr:nth-child(2) td div::after {content: "Bolest kloubů"}
+#table_Symptom_01 tr:nth-child(3) td div::after {content: "Bolest vazů / šlach"}
+#table_Symptom_01 tr:nth-child(4) td div::after {content: "Bolest svalů"}
+#table_Symptom_01 tr:nth-child(5) td div::after {content: "Bolest zad"}
+#table_Symptom_01 tr:nth-child(6) td div::after {content: "Bolest žaludku"}
+#table_Symptom_01 tr:nth-child(7) td div::after {content: "Chutě na tučné"}
+#table_Symptom_01 tr:nth-child(8) td div::after {content: "Chutě na slanné"}
+#table_Symptom_01 tr:nth-child(9) td div::after {content: "Chutě na sladké"}
+#table_Symptom_01 tr:nth-child(10) td div::after {content: ""}
+#table_Symptom_01 tr:nth-child(11) td div::after {content: ""}
+#table_Symptom_01 tr:nth-child(12) td div::after {content: ""}
+
+#table_Symptom_02 tr:nth-child(1) td div::after {content: "Pocit únavy po probuzení"}
+#table_Symptom_02 tr:nth-child(2) td div::after {content: "Únava přes den"}
+#table_Symptom_02 tr:nth-child(3) td div::after {content: "Pocit potřeby kofeinu"}
+#table_Symptom_02 tr:nth-child(4) td div::after {content: "Nespavost"}
+#table_Symptom_02 tr:nth-child(5) td div::after {content: "Mozková mlha"}
+#table_Symptom_02 tr:nth-child(6) td div::after {content: "Točení hlavy / malátnost"}
+#table_Symptom_02 tr:nth-child(7) td div::after {content: "Kopřivka (šedivá vyrážka)"}
+#table_Symptom_02 tr:nth-child(8) td div::after {content: "Vyrážka"}
+#table_Symptom_02 tr:nth-child(9) td div::after {content: "Růžové hrbolky / skvrny na kůži"}
+#table_Symptom_02 tr:nth-child(10) td div::after {content: ""}
+#table_Symptom_02 tr:nth-child(11) td div::after {content: ""}
+#table_Symptom_02 tr:nth-child(12) td div::after {content: ""}
+
+#table_Symptom_03 tr:nth-child(1) td div::after {content: "Suché vlasy / pokožka / nehty"}
+#table_Symptom_03 tr:nth-child(2) td div::after {content: "Svědění očí / úst / uší / kůže"}
+#table_Symptom_03 tr:nth-child(3) td div::after {content: "Hlen / rýma"}
+#table_Symptom_03 tr:nth-child(4) td div::after {content: "Kýchání"}
+#table_Symptom_03 tr:nth-child(5) td div::after {content: "Kašel / chrchlání"}
+#table_Symptom_03 tr:nth-child(6) td div::after {content: "Tlak v dutinách hlavy"}
+#table_Symptom_03 tr:nth-child(7) td div::after {content: "Úzkost"}
+#table_Symptom_03 tr:nth-child(8) td div::after {content: "Deprese"}
+#table_Symptom_03 tr:nth-child(9) td div::after {content: "Podrážděnost"}
+#table_Symptom_03 tr:nth-child(10) td div::after {content: ""}
+#table_Symptom_03 tr:nth-child(11) td div::after {content: ""}
+#table_Symptom_03 tr:nth-child(12) td div::after {content: ""}
+
+/* Content - Notes */
+#text_DailyPlanner_Label_02::before {content: "Poznámky:"}
+
+/* Image settings */
+
+#icon_DailyPlanner_OnRow tr td div::before {
+	content: "\2610 \00A0";
+	font-size: 25px;
+	color: #7f7f7f;
+	padding-left: 3.33px;
+	margin-left: -3.33px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<!--
+  *   _  _             _         
+  *  | || |___ __ _ __| |___ _ _ 
+  *  | __ / -_) _` / _` / -_) '_|
+  *  |_||_\___\__,_\__,_\___|_|  
+  *                              
+-->
+
+  <main class="frame">
+    <header>
+      <h1 id="text_Date">
+        <text id="text_ShortNumber_01"></text><text id="text_Month_Title_01"></text>
+      </h1>
+    </header>
+
+    <logo>
+      <a href="page_MonthlyOverview_01.html"><picture id="image_Heart"></picture></a>
+    </logo>
+
+    <subheader>
+      <ul>
+        <li><text id="text_Condition_01"></text></li>
+        <li><text id="text_Condition_02"></text></li>
+        <li><text id="text_Condition_03"></text></li>
+        <li><text id="text_Condition_04"></text></li>
+        <li><text id="text_Condition_05"></text></li>
+      </ul>
+
+      <ul>
+			<li><picture id="image_Stars"></picture></li>
+			<li><picture id="image_Stars"></picture></li>
+			<li><picture id="image_Stars"></picture></li>
+			<li><picture id="image_Stars"></picture></li>
+			<li><picture id="image_Stars"></picture></li>
+      </ul>
+    </subheader>
+  </main>
+
+
+<!--
+  *    ___         _           _           _  _     _          
+  *   / __|___ _ _| |_ ___ _ _| |_   ___  | \| |___| |_ ___ ___
+  *  | (__/ _ \ ' \  _/ -_) ' \  _| |___| | .` / _ \  _/ -_|_-<
+  *   \___\___/_||_\__\___|_||_\__|       |_|\_\___/\__\___/__/
+-->
+
+  <section>
+    <label>
+      <text id="text_DailyPlanner_Label_01"></text>
+    </label>
+  </section>
+
+  <section id="icon_DailyPlanner_OnRow" class="section_Content_Row section_Split">
+
+    <subsection>
+      <table id="table_Symptom_01">
+        <tbody>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+        </tbody>
+      </table>
+    </subsection>
+
+    <subsection>
+      <table id="table_Symptom_02">
+        <tbody id="text_QuarterlyOverview_NumberOnRow">
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+        </tbody>
+      </table>
+    </subsection>
+
+    <subsection>
+      <table id="table_Symptom_03">
+        <tbody id="text_QuarterlyOverview_NumberOnRow">
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+        </tbody>
+      </table>
+    </subsection>
+  </section>
+
+<!--
+  *    ___         _           _           _  _     _          
+  *   / __|___ _ _| |_ ___ _ _| |_   ___  | \| |___| |_ ___ ___
+  *  | (__/ _ \ ' \  _/ -_) ' \  _| |___| | .` / _ \  _/ -_|_-<
+  *   \___\___/_||_\__\___|_||_\__|       |_|\_\___/\__\___/__/
+-->
+
+  <section class="section_Content_Column">
+    <subsection>
+      <label>
+        <text id="text_DailyPlanner_Label_02"></text>
+      </label>
+      <table>
+        <tbody>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+          <tr><td><div></div></td></tr>
+        </tbody>
+      </table>
+    </subsection>
+  </section>
+</body>
+</html>
