@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+set_Test
+
+Název schůzky:
+set_Title
+Místo schůzky:
+set_Place
+Datum a čas schůzky:
+set_Start - set_End
+Poznámky:
+set_Note
+-------------------
+
+
+
+<?xml eversion="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -161,7 +175,7 @@ subheader ul:last-child {
 /* ------------- */
 
 /* Header */
-#text_Date::before {content: "Datum: "}
+#text_Date::before {content: "Datum"}
 #text_Month::before {content: "Měsíc: "}
 
 /* Header - Days */
@@ -292,7 +306,7 @@ header #text_Date text:first-child::after {content: "."}
 
   <main class="frame">
     <header>
-      <h1 id="text_Date">
+      <h1 id="text_Date">set_Test
         <text id="text_ShortNumber_01"></text><text id="text_Month_Title_01"></text>
       </h1>
     </header>
