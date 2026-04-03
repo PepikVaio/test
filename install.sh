@@ -22,8 +22,8 @@ WGET="wget"
 # reMarkable má staré wget, které nepodporuje STL, toto chybu opraví.
 upgrade_wget() {
     wget_path=/home/root/wget
-    wget_remote=http://toltec-dev.org/thirdparty/bin/wget-v1.21.1-1
-    wget_checksum=c258140f059d16d24503c62c1fdf747ca843fe4ba8fcd464a6e6bda8c3bbb6b5
+    wget_remote=http://toltec-dev.org/thirdparty/bin/wget-v1.21.1-3
+    wget_checksum=3130886a020a56b7471ed60f3742db26acdced4b27fed5be22f9892b77589bc5
 
     if [ -f "$wget_path" ] && ! sha256sum -c <(echo "$wget_checksum  $wget_path") > /dev/null 2>&1; then
         rm "$wget_path"
