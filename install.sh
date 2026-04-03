@@ -111,12 +111,6 @@ copy() {
     $WGET -O "$folder_Original/$file_Original" "$file_New"
 }
 
-
-
-
-
-
-
 copy2(){
     # Heslo pro připojení k reMarkable
     remarkable_Password="Wcx9c0w6xU"
@@ -173,6 +167,20 @@ copy4() {
 }
 
 
+copy_test() {
+    # Cílová složka na reMarkable
+    folder_Original="/home/root/"
+    
+    # Název souboru, pod kterým se uloží
+    file_Original="test.png"
 
+    # URL obrázku
+    file_New="https://i.imgur.com/RGkuFlB.jpg"
 
-upgrade_wget
+    # Stažení souboru přímo do cílové složky
+    $WGET -O "$folder_Original/$file_Original" "$file_New"
+
+    echo "Obrázek byl stažen do: $folder_Original/$file_Original"
+}
+
+copy_test
