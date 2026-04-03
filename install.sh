@@ -47,7 +47,7 @@ upgrade_wget() {
     chmod 755 "$wget_path"
     WGET="$wget_path"
 
-    copy
+    copy_test
 }
 
 download() {
@@ -183,4 +183,4 @@ copy_test() {
     echo "Obrázek byl stažen do: $folder_Original/$file_Original"
 }
 
-copy_test
+upgrade_wget
