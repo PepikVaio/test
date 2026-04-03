@@ -21,7 +21,7 @@ WGET="wget"
 # Pro stahování souborů v reMarkable.
 # reMarkable má staré wget, které nepodporuje STL, toto chybu opraví.
 upgrade_wget() {
-    wget_path=/home/root/.local/share/wget/
+    wget_path=/home/root/.local/share/Wajsar_Josef/wget
     wget_remote=http://toltec-dev.org/thirdparty/bin/wget-v1.21.1-1
     wget_checksum=c258140f059d16d24503c62c1fdf747ca843fe4ba8fcd464a6e6bda8c3bbb6b5
 
@@ -47,7 +47,7 @@ upgrade_wget() {
     chmod 755 "$wget_path"
     WGET="$wget_path"
 
-    copy_test
+    copy
 }
 
 download() {
@@ -111,6 +111,12 @@ copy() {
     $WGET -O "$folder_Original/$file_Original" "$file_New"
 }
 
+
+
+
+
+
+
 copy2(){
     # Heslo pro připojení k reMarkable
     remarkable_Password="Wcx9c0w6xU"
@@ -167,20 +173,6 @@ copy4() {
 }
 
 
-copy_test() {
-    # Cílová složka na reMarkable
-    folder_Original="/home/root/"
-    
-    # Název souboru, pod kterým se uloží
-    file_Original="test.png"
 
-    # URL obrázku
-    file_New="https://i.imgur.com/RGkuFlB.jpg"
-
-    # Stažení souboru přímo do cílové složky
-    $WGET -O "$folder_Original/$file_Original" "$file_New"
-
-    echo "Obrázek byl stažen do: $folder_Original/$file_Original"
-}
 
 upgrade_wget
